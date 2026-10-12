@@ -852,7 +852,7 @@
         mapFrame.addEventListener('pointermove',ev=>{if(!dragging||!pointerStart)return;const dx=ev.clientX-pointerStart.x,dy=ev.clientY-pointerStart.y;if(Math.abs(dx)+Math.abs(dy)>4)dragMoved=true;panX=pointerStart.panX+dx;panY=pointerStart.panY+dy;updateMapTransform();});
         function finishDrag(){dragging=false;pointerStart=null;mapFrame.classList.remove('dragging');}
         mapFrame.addEventListener('pointerup',finishDrag);mapFrame.addEventListener('pointercancel',finishDrag);
-        const SYNC_URL = ''; // cola aqui o URL /exec do Apps Script
+        const SYNC_URL = 'https://script.google.com/macros/s/AKfycbz9Gr9POliuRhehRuYlht2nYbzez5uX8ptg6jRBvOrYb6X3HVDczze5s1IVS4DD_8I/exec'; // URL do Apps Script
         let markersCol = null, userCap = null, myId = '', readOnly = false;
         function setAuthor(n) { myId = (n || '').trim().slice(0, 30); try { localStorage.setItem('redm-nome', myId); } catch (e) {} }
         function makeDb(url) {
